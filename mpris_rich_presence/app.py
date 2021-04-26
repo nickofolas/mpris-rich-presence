@@ -10,7 +10,7 @@ try:
     import gi
     # If this fails, then we know PyGObject was not installed, and it's kinda
     # crucial that it be installed.
-except ImportError:
+except:
     print("PyGObject is not installed. It must be installed before the program can run.")
     exit()
 

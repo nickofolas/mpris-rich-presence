@@ -13,3 +13,5 @@ The following will describe how to install and use the program.
 * [Playerctl](https://github.com/altdesktop/playerctl)
 * PyGObject
   * There's no one way to install this, so please refer to its installation documentation [here](https://pygobject.readthedocs.io/en/latest/getting_started.html)
+
+Once you have those both installed, then you're ready to install the program itself.
