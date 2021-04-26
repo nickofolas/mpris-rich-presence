@@ -11,5 +11,5 @@ setup(
     license="MIT",
     description="Uses Playerctl to generate Discord Rich Presence",
     long_description=readme,
-    entry_points={"console_scripts": ["mpris-rich-presence=mpris-rich-presence.app:main"]}
+    entry_points={"console_scripts": ["mpris-rich-presence=mpris_rich_presence.app:main"]}
 )
