@@ -6,7 +6,7 @@ This program allows MPRIS-compatible players to communicate with Discord's IPC, 
   <img src="https://i.imgur.com/z09rwDf.png" height="150px">
 </p>
 
-<h2>Usage</h2>
+<h2>Prerequisites</h2>
 The following will describe how to install and use the program.
 
 **Requirements**
@@ -15,3 +15,18 @@ The following will describe how to install and use the program.
   * There's no one way to install this, so please refer to its installation documentation [here](https://pygobject.readthedocs.io/en/latest/getting_started.html)
 
 Once you have those both installed, then you're ready to install the program itself.
+
+<h2>Installation</h2>
+```
+pip install -U https://github.com/nickofolas/mpris-rich-presence/archive/master.zip
+```
+The use of a virtual environment is optional.
+
+<h2>Usage</h2>
+This program can be run in both interactive and uninteractive ways.
+
+<h4>Interactive</h4>
+By simply calling `mpris-rich-presence` (or `python -m mpris_rich_presence` if it wasn't added to your $PATH), an interactive version of the script will be launched, which lets you choose which media player (out of the currently running players) will be monitored for rich presence. Selecting 0 (the default) will let the program automatically switch the monitored player based on which it detects to be active.
+
+<h4>Uninteractive</h4>
+By calling the program with the `--auto` flag appended, it will run completely autonomously, using the same logic as the "auto" option from the interactive mode. This is useful if you want the program to be autostarted.
