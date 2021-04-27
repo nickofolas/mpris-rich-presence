@@ -20,6 +20,7 @@ Once you have those both installed, then you're ready to install the program its
 <code>
 pip install -U https://github.com/nickofolas/mpris-rich-presence/archive/master.zip
 </code>
+
 The use of a virtual environment is optional.
 
 <h2>Usage</h2>
