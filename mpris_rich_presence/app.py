@@ -19,7 +19,13 @@ try:
     # If this fails, then we know that Playerctl is not installed, and it as well
     # is kinda sorta super important for anything to work here.
 except ValueError:
-    print("Playerctl is not installed. It must be installed before the program can run.")
+    print(
+        "One of 2 things has happened here:\n"
+        "1) Playerctl is not installed. Please install it!\n"
+        "2) The typelib file for Playerctl is not present. "
+        "You might need to uninstall Playerctl and PyGObject, "
+        "and then reinstall them in a different order."
+    )
     exit()
 
 from gi.repository import Playerctl, GLib
