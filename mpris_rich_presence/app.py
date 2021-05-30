@@ -32,11 +32,6 @@ from gi.repository import Playerctl, GLib
 
 from .rpc import DiscordIpcClient
 
-KNOWN_MEDIA_PLAYERS = [
-    "vlc",
-    "strawberry",
-    "audacious"
-]
 UPDATE_SIGNALS = [
     "metadata",
     "playback-status::playing",
@@ -101,11 +96,6 @@ def on_status_update(player, stuff, manager):
     if not media_path.exists(): # Ensure that only local files are allowed
         return
 
-    if player.props.player_name in KNOWN_MEDIA_PLAYERS:
-        large_image = f"large-icon-{player.props.player_name}"
-    else: # If we recognize the player, use its icon, otherwise fallback to default
-        large_image = "large-icon-unknown"
-
     state = "{0} - {1}".format(
         player.get_artist() or "Unknown Artist",
         player.get_album() or "Unknown Album"
@@ -123,7 +113,7 @@ def on_status_update(player, stuff, manager):
         },
         "assets": {
             "large_text": f"Listening with {player.props.player_name}",
-            "large_image": large_image
+            "large_image": "logo"
         }
     }
 
