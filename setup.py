@@ -7,7 +7,7 @@ setup(
     name="mpris-rich-presence",
     author="nickofolas",
     url="https://github.com/nickofolas/mpris-rich-presence",
-    version="0.1.0",
+    version="0.1.1",
     license="MIT",
     description="Uses Playerctl to generate Discord Rich Presence",
     long_description=readme,
